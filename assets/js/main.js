@@ -32,29 +32,29 @@
 			});
 
 		// Touch mode.
-			skel.on('change', function() {
+        skel.on('change', function() {
 
-				if (skel.vars.mobile || skel.breakpoint('mobile').active)
-					$body.addClass('is-touch');
-				else
-					$body.removeClass('is-touch');
-
-			});
+            if (skel.vars.mobile || skel.breakpoint('mobile').active) {
+                $body.addClass('is-touch');
+            } else {
+                $body.removeClass('is-touch');
+            }
+        });
 
 		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+        $('form').placeholder();
 
 		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+        skel.on('+mobile -mobile', function() {
+            $.prioritize(
+                '.important\\28 mobile\\29',
+                skel.breakpoint('mobile').active
+            );
+        });
 
 		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
+        if (skel.vars.IEVersion < 9)
+            $(':last-child').addClass('last-child');
 
 		// Gallery.
 			$window.on('load', function() {
