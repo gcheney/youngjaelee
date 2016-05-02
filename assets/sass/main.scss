@@ -5,50 +5,45 @@
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
 @import url('font-awesome.min.css');
 
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
-	@import "libs/skel";
+@import "libs/skel";
 
-	@include skel-breakpoints((
-		wide: '(max-width: 1920px)',
-		normal: '(max-width: 1680px)',
-		narrow: '(max-width: 1280px)',
-		narrower: '(max-width: 1000px)',
-		mobile: '(max-width: 736px)',
-		mobilenarrow: '(max-width: 480px)',
-	));
+@include skel-breakpoints((
+    wide: '(max-width: 1920px)',
+    normal: '(max-width: 1680px)',
+    narrow: '(max-width: 1280px)',
+    narrower: '(max-width: 1000px)',
+    mobile: '(max-width: 736px)',
+    mobilenarrow: '(max-width: 480px)',
+));
 
-	@include skel-layout((
-		reset: 'full',
-		boxModel: 'border',
-		grid: ( gutters: (40px, 40px) ),
-		conditionals: true,
-		containers: 1440px,
-		breakpoints: (
-			wide: (
-				containers: 1360px
-			),
-			normal: (
-				containers: 1200px
-			),
-			narrow: (
-				containers: 960px
-			),
-			narrower: (
-				containers: 95%
-			),
-			mobile: (
-				grid: ( gutters: (20px, 20px) )
-			),
-			mobilenarrow: (
-				containers: (95%, true)
-			)
-		)
-	));
+@include skel-layout((
+    reset: 'full',
+    boxModel: 'border',
+    grid: ( gutters: (40px, 40px) ),
+    conditionals: true,
+    containers: 1440px,
+    breakpoints: (
+        wide: (
+            containers: 1360px
+        ),
+        normal: (
+            containers: 1200px
+        ),
+        narrow: (
+            containers: 960px
+        ),
+        narrower: (
+            containers: 95%
+        ),
+        mobile: (
+            grid: ( gutters: (20px, 20px) )
+        ),
+        mobilenarrow: (
+            containers: (95%, true)
+        )
+    )
+));
 
 
 /* Basic */
