@@ -2168,6 +2168,17 @@
 		text-align: center;
 		text-decoration: none;
 	}
+        
+    .button.btn-link {
+        height: 2em;
+        line-height: 2em;
+        padding: 0 1em 0 1em;
+    }
+    
+    .button.btn-link:hover {
+        background-color: #00CED1;
+        color: #ffc;
+    }
 
 		input[type="button"].down,
 		input[type="submit"].down,
