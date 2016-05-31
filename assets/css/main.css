@@ -2176,8 +2176,7 @@
     }
     
     .button.btn-link:hover {
-        background-color: #00CED1;
-        color: #ffc;
+        color: #fff;
     }
 
 		input[type="button"].down,
