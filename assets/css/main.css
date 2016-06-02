@@ -1,10 +1,8 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
 
 /*
-	Big Picture by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	main.css
 */
 
 /* Reset */
@@ -2893,7 +2891,7 @@
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/studio.jpg");
+		background: url("images/overlay.png"), url("../../images/studio-min.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
