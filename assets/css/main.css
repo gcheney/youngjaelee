@@ -2171,7 +2171,8 @@
         height: 2em;
         line-height: 2em;
         padding: 0 1em 0 1em;
-        margin-right: 15px;
+        margin-top: 10px;
+        margin-right: 10px;
     }
     
     .button.btn-link:hover {
