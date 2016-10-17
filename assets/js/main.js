@@ -237,11 +237,11 @@
                     },
                     success: function(data) {
                         $contactForm.find('.sending').hide();
-                        $contactForm.append('<div style="text-align: center; color: green">Message sent!</div>');
+                        $contactForm.append('<div style="text-align: center; color: green;">Message sent!</div>');
                     },
                     error: function(err) {
                         $contactForm.find('.sending').hide();
-                        $contactForm.append('<div style="text-align: center; color: red">Oops, there was an issue sending your message. Please try again.</div>');
+                        $contactForm.append('<div style="text-align: center; color: red;">Oops, there was an issue sending your message. Please try again.</div>');
                         console.log(err);
                     }
                 });
