@@ -244,7 +244,7 @@
                         console.log(err);
                         alert('Oops, there was an error sending your message. Please try again.');
                     }
-            });
+                });
         });
         
 	});
