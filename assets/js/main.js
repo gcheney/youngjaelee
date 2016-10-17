@@ -242,7 +242,7 @@
                     error: function(err) {
                         $contactForm.find('.sending').hide();
                         console.log(err);
-                        alert('Ops, there was an error sending your message. Please try again.');
+                        alert('Oops, there was an error sending your message. Please try again.');
                     }
             });
         });
