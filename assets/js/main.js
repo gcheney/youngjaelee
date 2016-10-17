@@ -18,13 +18,13 @@
 			$all = $body.add($header);
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+        $body.addClass('is-loading');
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 0);
-			});
+        $window.on('load', function() {
+            window.setTimeout(function() {
+                $body.removeClass('is-loading');
+            }, 0);
+        });
 
 		// Touch mode.
         skel.on('change', function() {
@@ -52,131 +52,131 @@
             $(':last-child').addClass('last-child');
 
 		// Gallery.
-			$window.on('load', function() {
-				$('.gallery').poptrox({
-					baseZIndex: 10001,
-					useBodyOverflow: false,
-					usePopupEasyClose: false,
-					overlayColor: '#1f2328',
-					overlayOpacity: 0.65,
-					usePopupDefaultStyling: false,
-					usePopupCaption: true,
-					popupLoaderText: '',
-					windowMargin: (skel.breakpoint('mobile').active ? 5 : 50),
-					usePopupNav: true
-				});
-			});
+        $window.on('load', function() {
+            $('.gallery').poptrox({
+                baseZIndex: 10001,
+                useBodyOverflow: false,
+                usePopupEasyClose: false,
+                overlayColor: '#1f2328',
+                overlayOpacity: 0.65,
+                usePopupDefaultStyling: false,
+                usePopupCaption: true,
+                popupLoaderText: '',
+                windowMargin: (skel.breakpoint('mobile').active ? 5 : 50),
+                usePopupNav: true
+            });
+        });
 
 		// Section transitions.
-			if (!skel.vars.mobile
-			&&	skel.canUse('transition')) {
+        if (!skel.vars.mobile
+        &&	skel.canUse('transition')) {
 
-				var on = function() {
+            var on = function() {
 
-					// Generic sections.
-						$('.main.style1')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+                // Generic sections.
+                $('.main.style1')
+                    .scrollex({
+                        mode:		'middle',
+                        delay:		100,
+                        initialize:	function() { $(this).addClass('inactive'); },
+                        terminate:	function() { $(this).removeClass('inactive'); },
+                        enter:		function() { $(this).removeClass('inactive'); },
+                        leave:		function() { $(this).addClass('inactive'); }
+                    });
 
-						$('.main.style2')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+                $('.main.style2')
+                    .scrollex({
+                        mode:		'middle',
+                        delay:		100,
+                        initialize:	function() { $(this).addClass('inactive'); },
+                        terminate:	function() { $(this).removeClass('inactive'); },
+                        enter:		function() { $(this).removeClass('inactive'); },
+                        leave:		function() { $(this).addClass('inactive'); }
+                    });
 
-					// Work.
-						$('#work')
-							.scrollex({
-								top:		'40vh',
-								bottom:		'30vh',
-								delay:		50,
-								initialize:	function() {
+                // Work.
+                $('#work')
+                    .scrollex({
+                        top:		'40vh',
+                        bottom:		'30vh',
+                        delay:		50,
+                        initialize:	function() {
 
-												var t = $(this);
+                                        var t = $(this);
 
-												t.find('.row.images')
-													.addClass('inactive');
+                                        t.find('.row.images')
+                                            .addClass('inactive');
 
-											},
-								terminate:	function() {
+                                    },
+                        terminate:	function() {
 
-												var t = $(this);
+                                        var t = $(this);
 
-												t.find('.row.images')
-													.removeClass('inactive');
+                                        t.find('.row.images')
+                                            .removeClass('inactive');
 
-											},
-								enter:		function() {
+                                    },
+                        enter:		function() {
 
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
+                                        var t = $(this),
+                                            rows = t.find('.row.images'),
+                                            length = rows.length,
+                                            n = 0;
 
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.removeClass('inactive');
-													}, 100 * (length - n++));
-												});
+                                        rows.each(function() {
+                                            var row = $(this);
+                                            window.setTimeout(function() {
+                                                row.removeClass('inactive');
+                                            }, 100 * (length - n++));
+                                        });
 
-											},
-								leave:		function(t) {
+                                    },
+                        leave:		function(t) {
 
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
+                                        var t = $(this),
+                                            rows = t.find('.row.images'),
+                                            length = rows.length,
+                                            n = 0;
 
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.addClass('inactive');
-													}, 100 * (length - n++));
-												});
+                                        rows.each(function() {
+                                            var row = $(this);
+                                            window.setTimeout(function() {
+                                                row.addClass('inactive');
+                                            }, 100 * (length - n++));
+                                        });
 
-											}
-							});
+                                    }
+                    });
 
 					// Contact.
-						$('#contact')
-							.scrollex({
-								top:		'50%',
-								delay:		50,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+                    $('#contact')
+                        .scrollex({
+                            top:		'50%',
+                            delay:		50,
+                            initialize:	function() { $(this).addClass('inactive'); },
+                            terminate:	function() { $(this).removeClass('inactive'); },
+                            enter:		function() { $(this).removeClass('inactive'); },
+                            leave:		function() { $(this).addClass('inactive'); }
+                        });
 
 				};
 
 				var off = function() {
 
 					// Generic sections.
-						$('.main.style1')
-							.unscrollex();
+                    $('.main.style1')
+                        .unscrollex();
 
-						$('.main.style2')
-							.unscrollex();
+                    $('.main.style2')
+                        .unscrollex();
 
 					// Work.
-						$('#work')
-							.unscrollex();
+                    $('#work')
+                        .unscrollex();
 
 					// Contact.
-						$('#contact')
-							.unscrollex();
+                    $('#contact')
+                        .unscrollex();
 
 				};
 
@@ -192,37 +192,61 @@
 			}
 
 		// Events.
-			var resizeTimeout, resizeScrollTimeout;
+        var resizeTimeout, resizeScrollTimeout;
 
-			$window
-				.resize(function() {
+        $window
+            .resize(function() {
 
-					// Disable animations/transitions.
-						$body.addClass('is-resizing');
+                // Disable animations/transitions.
+                    $body.addClass('is-resizing');
 
-					window.clearTimeout(resizeTimeout);
+                window.clearTimeout(resizeTimeout);
 
-					resizeTimeout = window.setTimeout(function() {
+                resizeTimeout = window.setTimeout(function() {
 
-						// Update scrolly links.
-							$('a[href^=#]').scrolly({
-								speed: 1500,
-								offset: $header.outerHeight() - 1
-							});
+                    // Update scrolly links.
+                        $('a[href^=#]').scrolly({
+                            speed: 1500,
+                            offset: $header.outerHeight() - 1
+                        });
 
-						// Re-enable animations/transitions.
-							window.setTimeout(function() {
-								$body.removeClass('is-resizing');
-								$window.trigger('scroll');
-							}, 0);
+                    // Re-enable animations/transitions.
+                        window.setTimeout(function() {
+                            $body.removeClass('is-resizing');
+                            $window.trigger('scroll');
+                        }, 0);
 
-					}, 100);
+                }, 100);
 
-				})
-				.load(function() {
-					$window.trigger('resize');
-				});
-
+            })
+            .load(function() {
+                $window.trigger('resize');
+            });
+        
+        // AJAX request to Formspree 
+        var $contactForm = $('#contact-form');
+        $contactForm.submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: 'https://formspree.io/nabi369@gmail.com',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    beforeSend: function() {
+                        $contactForm.append('<div class="sending">Sending message…</div>');
+                    },
+                    success: function(data) {
+                        $contactForm.find('.sending').hide();
+                        alert('Message sent successfully!');
+                    },
+                    error: function(err) {
+                        $contactForm.find('.sending').hide();
+                        console.log(err);
+                        alert('Ops, there was an error sending your message. Please try again.');
+                    }
+            });
+        });
+        
 	});
 
 })(jQuery);
